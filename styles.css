@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 60px;
+}
+.sidebar {
+    background-color: #343a40;
+    width: 250px;
+    padding: 2rem 1rem;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    overflow-y: auto;
+    color: #fff;
+}
+.sidebar nav ul {
+    list-style: none;
+}
+.sidebar nav ul li {
+    margin-bottom: 1rem;
+}
+.sidebar nav ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.sidebar nav ul li a:hover {
+    background-color: #495057;
+    color: #fff;
+}
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    margin-left: 250px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.main-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+}
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.project-card h3 {
+    font-size: 1.4rem;
+    color: #007bff;
+    margin-bottom: 0.75rem;
+}
+.project-card p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+        padding: 1rem;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+    .container {
+        flex-direction: column;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
